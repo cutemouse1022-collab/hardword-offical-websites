@@ -1,0 +1,1004 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8fbff">
+  <meta name="description" content="屏榮食品以食品製造、品質管理與產品研發為基礎，結合 AI 智慧應用思維，陪伴合作夥伴從產品創意走向穩定量產。">
+  <meta property="og:title" content="屏榮食品｜從創意到量產，讓每一份美味更有競爭力">
+  <meta property="og:description" content="結合食品研發、精準製造與智慧科技，打造更具效率、品質與市場競爭力的食品解決方案。">
+  <meta property="og:type" content="website">
+  <title>屏榮食品｜從創意到量產，讓每一份美味更有競爭力</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { blue: '#2563EB', purple: '#7C3AED', mint: '#10B981', ink: '#0F172A', muted: '#64748B', mist: '#F8FAFC' }
+          },
+          fontFamily: { sans: ['Inter', 'Noto Sans TC', 'system-ui', 'sans-serif'] }
+        }
+      }
+    };
+  </script>
+  <style>
+    :root {
+      --blue: #4CC878;
+      --blue-deep: #237A4B;
+      --purple: #237A4B;
+      --mint: #4CC878;
+      --white: #FFFFFF;
+      --mist: #FFFEF7;
+      --ink: #26372D;
+      --muted: #5D7567;
+      --border: #D8E8DA;
+      --soft-blue: #E8F7EF;
+      --radius-lg: 26px;
+      --radius-xl: 36px;
+      --shadow-card: 0 18px 50px rgba(15, 23, 42, .055);
+      --shadow-hover: 0 28px 70px rgba(37, 99, 235, .13);
+      --header-height: 82px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-height) + 20px); }
+    body {
+      margin: 0; color: var(--ink); background: var(--white);
+      font-family: Inter, "Noto Sans TC", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.7; letter-spacing: .005em; overflow-x: clip;
+      -webkit-font-smoothing: antialiased;
+    }
+    body.menu-open { overflow: hidden; }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    button { font: inherit; }
+    :focus-visible { outline: 3px solid rgba(37, 99, 235, .6); outline-offset: 4px; }
+    ::selection { color: #0F172A; background: rgba(147, 197, 253, .5); }
+    .container { width: min(1180px, calc(100% - 48px)); margin-inline: auto; }
+    .section { position: relative; padding: 112px 0; scroll-margin-top: calc(var(--header-height) + 16px); }
+    .section-soft { background: linear-gradient(180deg, #F8FAFC 0%, #F5F9FF 100%); }
+    .section-kicker { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 18px; color: var(--blue); font-size: .77rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    .section-kicker::before { content: ""; display: inline-block; width: 26px; height: 1px; background: currentColor; }
+    .section-title { max-width: 850px; margin: 0; font-size: clamp(2rem, 4.2vw, 3.55rem); line-height: 1.27; letter-spacing: -.045em; font-weight: 800; }
+    .section-lead { max-width: 720px; margin: 22px 0 0; color: var(--muted); font-size: clamp(1rem, 1.3vw, 1.1rem); line-height: 1.95; }
+    .gradient-text { background: linear-gradient(110deg, var(--blue) 6%, #4F70E8 47%, var(--purple) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .eyebrow-pill { display: inline-flex; align-items: center; gap: 9px; padding: 8px 13px; border: 1px solid rgba(37, 99, 235, .16); border-radius: 999px; background: rgba(255,255,255,.75); color: #315BAE; font-size: .76rem; font-weight: 700; box-shadow: 0 4px 14px rgba(37, 99, 235, .045); }
+    .eyebrow-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--mint); box-shadow: 0 0 0 4px rgba(16,185,129,.1); }
+    .btn { position: relative; display: inline-flex; justify-content: center; align-items: center; gap: 10px; min-height: 52px; padding: 13px 21px; border: 1px solid transparent; border-radius: 15px; font-size: .94rem; font-weight: 700; line-height: 1.3; cursor: pointer; transition: transform .25s ease, box-shadow .25s ease, background .25s ease, border-color .25s ease, color .25s ease; }
+    .btn svg { flex: none; transition: transform .25s ease; }
+    .btn-primary { color: #fff; background: linear-gradient(110deg, var(--blue), #4F46E5 65%, var(--purple)); box-shadow: 0 12px 24px rgba(37, 99, 235, .2); }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 16px 32px rgba(37,99,235,.22), 0 0 0 4px rgba(16,185,129,.09); }
+    .btn-primary:hover svg { transform: translateX(3px); }
+    .btn-secondary { color: var(--ink); border-color: rgba(148,163,184,.45); background: rgba(255,255,255,.72); box-shadow: 0 8px 20px rgba(15,23,42,.035); backdrop-filter: blur(12px); }
+    .btn-secondary:hover { transform: translateY(-3px); color: var(--blue); border-color: rgba(37,99,235,.4); box-shadow: 0 14px 30px rgba(37,99,235,.08); }
+    .btn-status { position: absolute; left: 50%; bottom: calc(100% + 10px); transform: translate(-50%, 4px); padding: 6px 9px; border-radius: 8px; color: #047857; background: #ECFDF5; border: 1px solid #A7F3D0; white-space: nowrap; font-size: .68rem; font-weight: 700; opacity: 0; visibility: hidden; transition: opacity .2s ease, transform .2s ease, visibility .2s ease; pointer-events: none; }
+    .btn-primary:hover .btn-status, .btn-primary:focus-visible .btn-status { opacity: 1; visibility: visible; transform: translate(-50%, 0); }
+    .skip-link { position: fixed; z-index: 1000; top: 10px; left: 10px; padding: 10px 15px; border-radius: 10px; color: white; background: var(--ink); transform: translateY(-150%); }
+    .skip-link:focus { transform: translateY(0); }
+
+    /* 固定導覽列 */
+    .site-header { position: fixed; z-index: 100; top: 0; left: 0; width: 100%; height: var(--header-height); border-bottom: 1px solid transparent; background: rgba(255,255,255,.84); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); transition: box-shadow .25s ease, border-color .25s ease, background .25s ease; }
+    .site-header.is-scrolled { border-color: rgba(226,232,240,.86); background: rgba(255,255,255,.93); box-shadow: 0 8px 30px rgba(15,23,42,.045); }
+    .nav-wrap { display: flex; align-items: center; justify-content: space-between; height: 100%; gap: 24px; }
+    .brand-lockup { display: inline-flex; flex: none; align-items: center; gap: 11px; min-width: 190px; }
+    .brand-mark { display: grid; place-items: center; width: 42px; height: 42px; overflow: hidden; border-radius: 14px; color: white; background: linear-gradient(140deg, #2563EB, #6554D9 78%); box-shadow: 0 7px 18px rgba(37,99,235,.22); }
+    .brand-mark svg { width: 27px; height: 27px; }
+    .brand-name { display: block; font-size: 1.02rem; font-weight: 900; letter-spacing: .04em; line-height: 1.25; }
+    .brand-sub { display: block; margin-top: 3px; color: var(--muted); font-family: Inter, sans-serif; font-size: .59rem; letter-spacing: .14em; line-height: 1; }
+    .main-nav { display: flex; align-items: center; justify-content: flex-end; gap: clamp(12px, 1.6vw, 24px); }
+    .nav-link { position: relative; padding: 10px 0; color: #526076; font-size: .82rem; font-weight: 600; white-space: nowrap; transition: color .2s ease; }
+    .nav-link::after { content: ""; position: absolute; left: 0; right: 0; bottom: 3px; height: 2px; border-radius: 2px; background: linear-gradient(90deg, var(--blue), var(--purple)); transform: scaleX(0); transform-origin: left; transition: transform .2s ease; }
+    .nav-link:hover, .nav-link.is-active { color: var(--blue); }
+    .nav-link.is-active::after, .nav-link:hover::after { transform: scaleX(1); }
+    .nav-cta { display: inline-flex; align-items: center; gap: 8px; flex: none; padding: 11px 15px; border-radius: 13px; color: #fff; background: var(--ink); font-size: .8rem; font-weight: 700; transition: transform .2s ease, background .2s ease; }
+    .nav-cta:hover { transform: translateY(-2px); background: var(--blue); }
+    .menu-toggle { display: none; place-items: center; width: 44px; height: 44px; border: 1px solid var(--border); border-radius: 13px; background: white; color: var(--ink); cursor: pointer; }
+    .mobile-menu { display: none; }
+
+    /* Hero */
+    .hero { position: relative; display: flex; align-items: center; min-height: min(820px, 100svh); padding: calc(var(--header-height) + 74px) 0 82px; overflow: hidden; isolation: isolate; background: radial-gradient(ellipse at 73% 30%, rgba(219,234,254,.67) 0%, rgba(239,246,255,.28) 28%, transparent 58%), linear-gradient(135deg, #FFFFFF 0%, #F9FBFF 56%, #F2F7FF 100%); }
+    .hero::before { content: ""; position: absolute; z-index: -2; inset: 0; background-image: linear-gradient(rgba(37,99,235,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(37,99,235,.035) 1px, transparent 1px); background-size: 48px 48px; mask-image: linear-gradient(90deg, transparent 0%, #000 44%, #000 86%, transparent 100%); }
+    .hero::after { content: ""; position: absolute; z-index: -1; width: 550px; height: 550px; right: -220px; bottom: -300px; border: 1px solid rgba(124,58,237,.11); border-radius: 50%; box-shadow: 0 0 0 46px rgba(37,99,235,.025), 0 0 0 100px rgba(124,58,237,.02); }
+    #heroParticles { position: absolute; z-index: -1; inset: 0; width: 100%; height: 100%; pointer-events: none; opacity: .78; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, .98fr) minmax(440px, 1.02fr); align-items: center; gap: clamp(38px, 5vw, 78px); }
+    .hero-copy { position: relative; z-index: 2; max-width: 620px; }
+    .hero h1 { min-height: 3.95em; margin: 24px 0 23px; font-size: clamp(2.55rem, 5.25vw, 4.9rem); font-weight: 900; line-height: 1.18; letter-spacing: -.065em; }
+    .hero h1 .typed-line { display: inline; }
+    .typing-cursor { display: inline-block; width: 3px; height: .9em; margin-left: 7px; vertical-align: -.05em; border-radius: 3px; background: var(--blue); animation: cursorBlink 1s steps(2, start) infinite; }
+    @keyframes cursorBlink { to { visibility: hidden; } }
+    .hero-description { max-width: 550px; color: #5C6B81; font-size: clamp(1rem, 1.35vw, 1.1rem); line-height: 2; }
+    .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 32px; }
+    .hero-proof { display: flex; flex-wrap: wrap; align-items: center; gap: 17px; margin-top: 32px; color: #758196; font-size: .78rem; }
+    .proof-item { display: inline-flex; align-items: center; gap: 7px; }
+    .proof-item svg { color: var(--blue); }
+    .proof-divider { width: 1px; height: 16px; background: #D5DDE9; }
+    .hero-visual { position: relative; min-width: 0; min-height: 510px; }
+    .hero-image-shell { position: absolute; inset: 22px 18px 22px 28px; overflow: hidden; border: 7px solid rgba(255,255,255,.9); border-radius: 42% 42% 28px 28px / 29% 29% 28px 28px; background: linear-gradient(135deg, #DCEBFF, #EDE9FE 70%, #F0FDFA); box-shadow: 0 35px 95px rgba(54,86,150,.17), 0 0 0 1px rgba(255,255,255,.8); transform: rotate(1.1deg); }
+    .hero-image-shell img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.04); filter: saturate(.92); }
+    .hero-image-shell::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(15,23,42,.01) 35%, rgba(15,23,42,.27) 100%); pointer-events: none; }
+    .hero-image-caption { position: absolute; z-index: 2; left: 36px; right: 28px; bottom: 34px; color: white; }
+    .hero-image-caption span { display: block; margin-bottom: 6px; font-family: Inter, sans-serif; font-size: .68rem; font-weight: 700; letter-spacing: .17em; text-transform: uppercase; opacity: .86; }
+    .hero-image-caption strong { display: block; font-size: clamp(1.05rem, 1.75vw, 1.45rem); font-weight: 800; letter-spacing: -.02em; }
+    .float-card { position: absolute; z-index: 4; display: flex; align-items: center; gap: 12px; padding: 15px 17px; border: 1px solid rgba(255,255,255,.88); border-radius: 18px; background: rgba(255,255,255,.86); box-shadow: 0 18px 45px rgba(15,23,42,.1); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); animation: floatSoft 6s ease-in-out infinite; }
+    .float-card.card-quality { top: 48px; left: -3px; }
+    .float-card.card-flow { right: -2px; bottom: 67px; animation-delay: -2.4s; }
+    .float-icon { display: grid; flex: none; place-items: center; width: 42px; height: 42px; border-radius: 13px; color: var(--blue); background: linear-gradient(135deg, #EFF6FF, #EEF2FF); }
+    .float-icon.mint { color: #047857; background: #ECFDF5; }
+    .float-text strong { display: block; font-size: .84rem; line-height: 1.35; }
+    .float-text small { display: block; margin-top: 4px; color: var(--muted); font-size: .69rem; line-height: 1.4; }
+    .hero-orbit { position: absolute; z-index: 1; width: 360px; height: 360px; top: 64px; left: 50%; transform: translateX(-50%); border: 1px solid rgba(37,99,235,.14); border-radius: 50%; pointer-events: none; }
+    .hero-orbit::before, .hero-orbit::after { content: ""; position: absolute; inset: 25px; border: 1px dashed rgba(124,58,237,.17); border-radius: 50%; }
+    .hero-orbit::after { inset: 65px; border-style: solid; border-color: rgba(37,99,235,.08); }
+    @keyframes floatSoft { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    .hero-bottom-note { position: absolute; right: max(24px, calc((100vw - 1180px)/2)); bottom: 25px; display: inline-flex; align-items: center; gap: 9px; color: #8290A5; font-size: .7rem; letter-spacing: .08em; }
+    .hero-bottom-note::before { content: ""; width: 28px; height: 1px; background: #B7C6DC; }
+
+    /* 品牌介紹 */
+    .about-grid { display: grid; grid-template-columns: .95fr 1.05fr; gap: clamp(42px, 7vw, 100px); align-items: center; margin-top: 54px; }
+    .about-visual { position: relative; min-height: 475px; }
+    .about-photo-main { position: absolute; inset: 0 70px 44px 0; overflow: hidden; border-radius: 30px; background: linear-gradient(135deg, #DDEBFC, #F4F0FF); }
+    .about-photo-main img { width: 100%; height: 100%; object-fit: cover; }
+    .about-photo-small { position: absolute; right: 0; bottom: 0; width: 48%; height: 43%; overflow: hidden; border: 7px solid white; border-radius: 24px; background: #E8F1FF; box-shadow: var(--shadow-card); }
+    .about-photo-small img { width: 100%; height: 100%; object-fit: cover; }
+    .experience-tile { position: absolute; top: 27px; right: 1px; z-index: 2; width: 152px; padding: 17px 15px; border: 1px solid rgba(255,255,255,.9); border-radius: 20px; background: rgba(255,255,255,.9); box-shadow: var(--shadow-card); backdrop-filter: blur(12px); }
+    .experience-tile strong { display: block; color: var(--blue); font-size: 2.55rem; line-height: 1.1; font-weight: 900; letter-spacing: -.06em; }
+    .experience-tile span { display: block; margin-top: 7px; color: #59677C; font-size: .75rem; line-height: 1.6; }
+    .about-copy .section-title { font-size: clamp(1.9rem, 3.3vw, 3rem); }
+    .about-copy p { margin: 20px 0 0; color: var(--muted); line-height: 2; }
+    .about-facilities { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; margin-top: 27px; }
+    .facility-chip { display: flex; align-items: center; gap: 11px; padding: 14px; border: 1px solid var(--border); border-radius: 15px; background: white; }
+    .facility-chip svg { flex: none; color: var(--blue); }
+    .facility-chip strong { display: block; font-size: .9rem; }
+    .facility-chip small { display: block; margin-top: 2px; color: var(--muted); font-size: .7rem; }
+    .text-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 25px; color: var(--blue); font-size: .9rem; font-weight: 800; }
+    .text-link svg { transition: transform .2s ease; }
+    .text-link:hover svg { transform: translateX(4px); }
+
+    /* 核心優勢 */
+    .strengths-head { display: flex; align-items: end; justify-content: space-between; gap: 35px; }
+    .strengths-head .section-lead { max-width: 410px; margin-top: 0; }
+    .strength-grid { display: grid; grid-template-columns: repeat(6, minmax(0,1fr)); gap: 17px; margin-top: 50px; }
+    .strength-card { position: relative; grid-column: span 2; min-height: 265px; padding: 26px; overflow: hidden; border: 1px solid rgba(226,232,240,.9); border-radius: var(--radius-lg); background: rgba(255,255,255,.88); box-shadow: 0 9px 30px rgba(15,23,42,.025); transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease; }
+    .strength-card:nth-child(4) { grid-column: 2 / span 2; }
+    .strength-card:hover { transform: translateY(-6px); border-color: rgba(147,197,253,.8); box-shadow: var(--shadow-hover); }
+    .strength-card::after { content: ""; position: absolute; top: -64px; right: -58px; width: 155px; height: 155px; border-radius: 50%; background: radial-gradient(circle, rgba(191,219,254,.35), transparent 69%); pointer-events: none; transition: transform .35s ease; }
+    .strength-card:hover::after { transform: scale(1.3); }
+    .strength-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 22px; }
+    .icon-tile { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 17px; color: var(--blue); background: linear-gradient(140deg, #EFF6FF, #F2F0FF); }
+    .icon-tile.mint { color: #059669; background: linear-gradient(140deg, #ECFDF5, #F0FDFA); }
+    .icon-tile.purple { color: var(--purple); background: linear-gradient(140deg, #F5F3FF, #EEF2FF); }
+    .card-number { align-self: start; color: #C5D0E0; font-family: Inter, sans-serif; font-size: .76rem; font-weight: 800; letter-spacing: .1em; }
+    .strength-card h3 { margin: 0 0 10px; font-size: 1.06rem; font-weight: 800; letter-spacing: -.02em; }
+    .strength-card p { margin: 0; color: var(--muted); font-size: .87rem; line-height: 1.9; }
+
+    /* Core products and technical solutions */
+    .solutions-section { background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%); }
+    .solutions-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 17px; margin-top: 50px; }
+    .solution-card { position: relative; min-height: 268px; padding: 28px; overflow: hidden; border: 1px solid rgba(226,232,240,.9); border-radius: var(--radius-lg); background: rgba(255,255,255,.9); box-shadow: 0 9px 30px rgba(15,23,42,.035); transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease; }
+    .solution-card:hover { transform: translateY(-6px); border-color: rgba(147,197,253,.8); box-shadow: var(--shadow-hover); }
+    .solution-card::after { content: ""; position: absolute; top: -64px; right: -58px; width: 155px; height: 155px; border-radius: 50%; background: radial-gradient(circle, rgba(191,219,254,.35), transparent 69%); pointer-events: none; }
+    .solution-icon { display: grid; place-items: center; width: 56px; height: 56px; margin-bottom: 24px; border-radius: 17px; color: var(--blue); background: linear-gradient(140deg, #EFF6FF, #F2F0FF); font-size: 1.35rem; }
+    .solution-card:nth-child(2) .solution-icon { color: #059669; background: linear-gradient(140deg, #ECFDF5, #F0FDFA); }
+    .solution-card:nth-child(3) .solution-icon { color: var(--purple); background: linear-gradient(140deg, #F5F3FF, #EEF2FF); }
+    .solution-card h3 { margin: 0 0 12px; font-size: 1.08rem; line-height: 1.5; font-weight: 800; letter-spacing: -.02em; }
+    .solution-card p { margin: 0; color: var(--muted); font-size: .89rem; line-height: 1.95; }
+
+    /* 產品 */
+    .products-heading { display: flex; align-items: end; justify-content: space-between; gap: 32px; }
+    .products-heading .section-lead { max-width: 425px; margin-top: 0; }
+    .product-grid { display: grid; grid-template-columns: 1.12fr .88fr .88fr; grid-template-rows: 250px 250px; gap: 17px; margin-top: 47px; }
+    .product-card { position: relative; min-width: 0; overflow: hidden; border-radius: 24px; isolation: isolate; background: linear-gradient(135deg, #DCEBFC, #EEF2FF); box-shadow: 0 10px 32px rgba(15,23,42,.045); }
+    .product-card:first-child { grid-row: span 2; }
+    .product-card:nth-child(4) { grid-column: 2 / span 2; }
+    .product-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .7s cubic-bezier(.2,.75,.25,1), filter .4s ease; }
+    .product-card:hover img { transform: scale(1.07); filter: saturate(1.08); }
+    .product-card::after { content: ""; position: absolute; z-index: 1; inset: 0; background: linear-gradient(180deg, rgba(15,23,42,0) 24%, rgba(15,23,42,.72) 100%); transition: opacity .3s ease; }
+    .product-card:hover::after { opacity: .92; }
+    .product-overlay { position: absolute; z-index: 2; left: 22px; right: 22px; bottom: 20px; color: white; transform: translateY(4px); transition: transform .3s ease; }
+    .product-card:hover .product-overlay { transform: translateY(0); }
+    .product-label { display: inline-flex; margin-bottom: 8px; padding: 5px 9px; border: 1px solid rgba(255,255,255,.42); border-radius: 999px; background: rgba(255,255,255,.15); backdrop-filter: blur(8px); font-size: .65rem; font-weight: 700; letter-spacing: .04em; }
+    .product-overlay h3 { margin: 0; font-size: clamp(1rem, 1.5vw, 1.35rem); font-weight: 800; }
+    .product-overlay p { max-width: 450px; margin: 6px 0 0; color: rgba(255,255,255,.82); font-size: .78rem; line-height: 1.65; }
+    .image-note { display: flex; align-items: center; gap: 8px; margin-top: 17px; color: #8290A5; font-size: .73rem; }
+    .image-note svg { flex: none; }
+
+    /* AI 解決方案 */
+    .ai-section { overflow: hidden; background: radial-gradient(ellipse at 85% 12%, rgba(219,234,254,.65), transparent 42%), linear-gradient(180deg, #F7FAFF 0%, #FFFFFF 100%); }
+    .ai-section::before { content: ""; position: absolute; top: 150px; right: -150px; width: 450px; height: 450px; border: 1px solid rgba(37,99,235,.08); border-radius: 50%; box-shadow: 0 0 0 50px rgba(37,99,235,.025), 0 0 0 100px rgba(124,58,237,.018); pointer-events: none; }
+    .ai-top { display: grid; grid-template-columns: 1fr .75fr; align-items: end; gap: 40px; }
+    .ai-top .section-lead { margin-top: 0; }
+    .ai-disclaimer { display: flex; align-items: flex-start; gap: 11px; max-width: 405px; padding: 14px 16px; border: 1px solid #DCE7F9; border-radius: 14px; background: rgba(255,255,255,.72); color: #61708A; font-size: .76rem; line-height: 1.75; }
+    .ai-disclaimer svg { flex: none; margin-top: 3px; color: var(--blue); }
+    .ai-flow { display: flex; align-items: center; justify-content: center; gap: 12px; margin: 39px 0 25px; color: #61708A; font-size: .72rem; font-weight: 700; letter-spacing: .04em; }
+    .flow-node { display: flex; align-items: center; gap: 8px; padding: 8px 12px; border: 1px solid #DCE7F9; border-radius: 999px; background: rgba(255,255,255,.85); }
+    .flow-node span { width: 7px; height: 7px; border-radius: 50%; background: var(--blue); }
+    .flow-line { width: min(7vw, 72px); height: 1px; background: linear-gradient(90deg, rgba(37,99,235,.15), rgba(124,58,237,.42)); }
+    .ai-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 15px; }
+    .ai-card { position: relative; min-height: 390px; padding: 26px 23px 23px; overflow: hidden; border: 1px solid rgba(219,230,247,.98); border-radius: 24px; background: rgba(255,255,255,.86); box-shadow: 0 16px 45px rgba(35,69,122,.045); transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease; }
+    .ai-card:hover { transform: translateY(-7px); border-color: rgba(147,197,253,.9); box-shadow: 0 24px 55px rgba(37,99,235,.1); }
+    .ai-card::after { content: ""; position: absolute; right: -45px; top: -45px; width: 140px; height: 140px; border-radius: 50%; background: radial-gradient(circle, rgba(219,234,254,.5), transparent 68%); pointer-events: none; }
+    .ai-card-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
+    .ai-card .icon-tile { width: 54px; height: 54px; }
+    .ai-card-code { color: #B2C1D6; font-family: Inter, sans-serif; font-size: .78rem; font-weight: 800; letter-spacing: .1em; }
+    .ai-card h3 { margin: 25px 0 7px; font-size: 1.1rem; font-weight: 800; }
+    .ai-card .en-label { color: var(--blue); font-family: Inter, sans-serif; font-size: .66rem; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
+    .ai-card p { margin: 15px 0 21px; color: var(--muted); font-size: .84rem; line-height: 1.9; }
+    .ai-card-link { display: inline-flex; align-items: center; gap: 7px; color: #315CC2; font-size: .8rem; font-weight: 800; }
+    .ai-card-link svg { transition: transform .2s ease; }
+    .ai-card-link:hover svg { transform: translateX(4px); }
+    .ai-bottom-callout { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-top: 26px; padding: 23px 26px; border: 1px solid rgba(207,222,246,.95); border-radius: 20px; background: linear-gradient(100deg, rgba(239,246,255,.94), rgba(250,245,255,.82)); }
+    .ai-bottom-callout strong { display: block; font-size: 1rem; font-weight: 800; }
+    .ai-bottom-callout p { margin: 5px 0 0; color: var(--muted); font-size: .8rem; }
+
+    /* 應用情境 */
+    .cases-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 17px; margin-top: 48px; }
+    .case-card { display: grid; grid-template-columns: 58px 1fr; gap: 18px; padding: 25px; border: 1px solid var(--border); border-radius: 23px; background: white; transition: border-color .25s ease, box-shadow .25s ease, transform .25s ease; }
+    .case-card:hover { transform: translateY(-4px); border-color: #C5D9FA; box-shadow: var(--shadow-card); }
+    .case-index { display: grid; place-items: center; width: 54px; height: 54px; border-radius: 17px; color: var(--blue); background: #EFF6FF; font-family: Inter, sans-serif; font-size: .87rem; font-weight: 800; }
+    .case-card h3 { margin: 0; font-size: 1.08rem; font-weight: 800; }
+    .case-card .case-tag { display: inline-flex; margin-top: 6px; color: #64748B; font-size: .7rem; font-weight: 700; letter-spacing: .02em; }
+    .case-rows { display: grid; gap: 10px; margin-top: 16px; }
+    .case-row { display: grid; grid-template-columns: 74px 1fr; gap: 10px; color: #64748B; font-size: .8rem; line-height: 1.75; }
+    .case-row strong { color: #334155; font-size: .76rem; }
+    .case-row strong::before { content: ""; display: inline-block; width: 5px; height: 5px; margin: 0 6px 2px 0; border-radius: 50%; background: var(--blue); }
+    .case-disclaimer { margin-top: 18px; color: #8793A5; font-size: .74rem; }
+
+    /* 觀點文章預覽 */
+    .insights-head { display: flex; align-items: end; justify-content: space-between; gap: 30px; }
+    .insight-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 16px; margin-top: 43px; }
+    .insight-card { display: flex; min-height: 295px; flex-direction: column; padding: 23px; border: 1px solid var(--border); border-radius: 22px; background: white; transition: transform .25s ease, box-shadow .25s ease; }
+    .insight-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-card); }
+    .insight-art { display: grid; place-items: center; width: 48px; height: 48px; margin-bottom: 20px; border-radius: 15px; color: var(--blue); background: linear-gradient(140deg, #EFF6FF, #F5F3FF); }
+    .insight-card:nth-child(2) .insight-art { color: #7C3AED; background: #F5F3FF; }
+    .insight-card:nth-child(3) .insight-art { color: #0F9D86; background: #ECFDF5; }
+    .insight-card:nth-child(4) .insight-art { color: #C27A1A; background: #FFF7ED; }
+    .insight-tag { display: inline-flex; align-self: flex-start; margin-bottom: 11px; padding: 5px 8px; border-radius: 7px; color: #61708A; background: #F1F5F9; font-size: .65rem; font-weight: 700; }
+    .insight-card h3 { margin: 0; font-size: 1rem; font-weight: 800; line-height: 1.6; }
+    .insight-card p { margin: 11px 0 20px; color: var(--muted); font-size: .8rem; line-height: 1.85; }
+    .insight-status { display: inline-flex; align-items: center; gap: 7px; margin-top: auto; color: #94A3B8; font-size: .72rem; font-weight: 700; }
+    .insight-status::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #CBD5E1; }
+
+    /* 品牌宣言 */
+    .manifesto { position: relative; overflow: hidden; padding: 104px 0; color: white; background: linear-gradient(115deg, #153E9C 0%, #2457C7 47%, #5542B8 100%); isolation: isolate; }
+    .manifesto::before { content: ""; position: absolute; z-index: -1; inset: 0; opacity: .24; background-image: linear-gradient(rgba(255,255,255,.13) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.13) 1px, transparent 1px); background-size: 46px 46px; mask-image: linear-gradient(90deg, transparent, black 30%, black 85%, transparent); }
+    .manifesto::after { content: ""; position: absolute; z-index: -1; top: -280px; right: -70px; width: 670px; height: 670px; border: 1px solid rgba(255,255,255,.17); border-radius: 50%; box-shadow: 0 0 0 55px rgba(255,255,255,.035), 0 0 0 115px rgba(255,255,255,.025); }
+    .manifesto-inner { display: grid; grid-template-columns: .82fr 1.18fr; align-items: center; gap: 64px; }
+    .manifesto .section-kicker { color: #C8D8FF; }
+    .manifesto h2 { max-width: 470px; margin: 0; font-size: clamp(2.1rem, 4.2vw, 3.7rem); line-height: 1.3; letter-spacing: -.05em; font-weight: 900; }
+    .manifesto-copy { padding-left: 34px; border-left: 1px solid rgba(255,255,255,.24); }
+    .manifesto-values { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 21px; }
+    .manifesto-values span { padding: 8px 12px; border: 1px solid rgba(255,255,255,.27); border-radius: 999px; color: #F5F7FF; background: rgba(255,255,255,.08); font-size: .79rem; font-weight: 700; }
+    .manifesto-copy p { max-width: 600px; margin: 0; color: rgba(255,255,255,.8); font-size: .95rem; line-height: 2.05; }
+
+    /* 聯絡 */
+    .contact-section { padding: 108px 0 88px; background: radial-gradient(ellipse at 20% 90%, rgba(219,234,254,.55), transparent 43%), #F8FAFC; }
+    .contact-panel { position: relative; display: grid; grid-template-columns: 1.1fr .9fr; align-items: center; gap: 45px; padding: clamp(30px, 5vw, 62px); overflow: hidden; border: 1px solid rgba(255,255,255,.95); border-radius: 34px; background: linear-gradient(120deg, rgba(255,255,255,.96), rgba(242,247,255,.95)); box-shadow: 0 25px 80px rgba(43,80,145,.09); }
+    .contact-panel::before { content: ""; position: absolute; top: -125px; right: -65px; width: 350px; height: 350px; border-radius: 50%; background: radial-gradient(circle, rgba(191,219,254,.35), rgba(221,214,254,.18) 48%, transparent 70%); pointer-events: none; }
+    .contact-panel h2 { margin: 0; font-size: clamp(2rem, 4vw, 3.35rem); line-height: 1.25; letter-spacing: -.055em; font-weight: 900; }
+    .contact-panel p { max-width: 540px; margin: 19px 0 0; color: var(--muted); line-height: 1.95; }
+    .contact-actions { position: relative; z-index: 1; display: flex; flex-direction: column; gap: 12px; align-items: stretch; justify-self: end; width: min(100%, 285px); }
+    .contact-actions .btn { width: 100%; }
+    .contact-social { display: grid; grid-template-columns: repeat(4, 1fr); gap: 9px; margin-bottom: 4px; }
+    .contact-panel > .contact-social { grid-column: 2; grid-row: 1; align-self: end; }
+    .contact-panel > div:nth-child(2) { grid-column: 2; grid-row: 2; }
+    .contact-panel > div:nth-child(3) { grid-column: 1; grid-row: 1 / span 3; }
+    .contact-panel > div:nth-child(4) { grid-column: 2; grid-row: 3; }
+    .social-link { display: grid; place-items: center; min-height: 48px; border: 1px solid rgba(148,163,184,.3); border-radius: 14px; color: #526076; background: rgba(255,255,255,.78); font-size: 1.2rem; transition: transform .2s ease, color .2s ease, border-color .2s ease, box-shadow .2s ease; }
+    .social-link:hover, .social-link:focus-visible { transform: translateY(-3px); color: var(--blue); border-color: rgba(37,99,235,.35); box-shadow: 0 10px 22px rgba(37,99,235,.1); }
+    .social-link.line:hover, .social-link.line:focus-visible { color: #06C755; border-color: rgba(6,199,85,.35); }
+    .social-link.facebook:hover, .social-link.facebook:focus-visible { color: #1877F2; border-color: rgba(24,119,242,.35); }
+    .social-link.linkedin:hover, .social-link.linkedin:focus-visible { color: #0A66C2; border-color: rgba(10,102,194,.35); }
+    .social-link.github:hover, .social-link.github:focus-visible { color: #24292F; border-color: rgba(36,41,47,.35); }
+    .form-label { margin: 2px 0 -3px; color: #526076; font-size: .76rem; font-weight: 800; letter-spacing: .04em; }
+    .contact-note { display: flex; justify-content: center; align-items: flex-start; gap: 8px; margin-top: 5px; color: #8290A5; font-size: .7rem; line-height: 1.65; }
+    .contact-note svg { flex: none; margin-top: 2px; }
+
+    /* Footer */
+    .site-footer { padding: 31px 0; background: #fff; border-top: 1px solid var(--border); }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .footer-brand { display: flex; align-items: center; gap: 10px; }
+    .footer-brand .brand-mark { width: 35px; height: 35px; border-radius: 11px; }
+    .footer-brand .brand-mark svg { width: 22px; height: 22px; }
+    .footer-brand strong { display: block; font-size: .85rem; font-weight: 900; }
+    .footer-brand small { display: block; color: #94A3B8; font-size: .62rem; }
+    .footer-meta { color: #8793A5; font-size: .72rem; text-align: right; }
+    .footer-meta p { margin: 0; }
+    .footer-meta p + p { margin-top: 4px; }
+    .back-top { display: inline-flex; align-items: center; gap: 6px; margin-left: 12px; color: var(--blue); font-weight: 800; }
+
+    /* 進場效果：JS 確認可用後才啟用，確保無 JS 時內容仍完整可讀 */
+    .js-ready .reveal { opacity: 0; transform: translateY(20px); transition: opacity .65s ease, transform .65s cubic-bezier(.2,.75,.25,1); }
+    .js-ready .reveal.is-visible { opacity: 1; transform: translateY(0); }
+    .js-ready .reveal-delay-1 { transition-delay: .08s; }
+    .js-ready .reveal-delay-2 { transition-delay: .16s; }
+    .js-ready .reveal-delay-3 { transition-delay: .24s; }
+    .image-fallback { background: linear-gradient(135deg, #E6F0FF, #F1EDFF 62%, #E8FAF4) !important; }
+    .image-fallback::before { content: "圖片載入失敗\A 請替換為公司實景照片"; white-space: pre-line; position: absolute; inset: 0; display: grid; place-content: center; padding: 20px; color: #62728B; font-size: .78rem; text-align: center; line-height: 1.8; }
+    .image-fallback img { display: none !important; }
+    .image-fallback::after { opacity: 0 !important; }
+    .sr-only { position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; clip: rect(0,0,0,0) !important; white-space: nowrap !important; border: 0 !important; }
+
+    @media (max-width: 1120px) {
+      :root { --header-height: 76px; }
+      .brand-lockup { min-width: auto; }
+      .main-nav { gap: 13px; }
+      .nav-link { font-size: .76rem; }
+      .nav-cta { padding: 10px 12px; font-size: .76rem; }
+      .hero-grid { grid-template-columns: minmax(0, .95fr) minmax(390px, 1.05fr); gap: 30px; }
+      .hero-visual { min-height: 460px; }
+      .ai-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .ai-card { min-height: 320px; }
+      .insight-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    }
+    @media (max-width: 900px) {
+      .container { width: min(100% - 40px, 720px); }
+      .section { padding: 86px 0; }
+      .main-nav, .nav-wrap > .nav-cta { display: none; }
+      .menu-toggle { display: grid; }
+      .mobile-menu { position: fixed; display: flex; flex-direction: column; top: var(--header-height); right: 0; left: 0; max-height: calc(100svh - var(--header-height)); padding: 13px 20px 25px; overflow-y: auto; border-bottom: 1px solid var(--border); background: rgba(255,255,255,.97); backdrop-filter: blur(18px); box-shadow: 0 18px 30px rgba(15,23,42,.08); opacity: 0; visibility: hidden; transform: translateY(-8px); transition: opacity .22s ease, transform .22s ease, visibility .22s ease; }
+      .mobile-menu.is-open { opacity: 1; visibility: visible; transform: translateY(0); }
+      .mobile-menu .nav-link { padding: 13px 8px; border-bottom: 1px solid #F1F5F9; font-size: .92rem; }
+      .mobile-menu .nav-link::after { display: none; }
+      .mobile-menu .mobile-booking { display: flex; align-items: center; justify-content: center; gap: 9px; min-height: 49px; margin-top: 15px; border-radius: 13px; color: white; background: var(--ink); font-size: .88rem; font-weight: 800; }
+      .hero { min-height: auto; padding: calc(var(--header-height) + 52px) 0 78px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 26px; }
+      .hero-copy { max-width: 690px; }
+      .hero h1 { min-height: 2.55em; max-width: 680px; font-size: clamp(2.75rem, 7vw, 4.5rem); }
+      .hero-description { max-width: 620px; }
+      .hero-visual { width: min(100%, 590px); min-height: 470px; margin: 0 auto; }
+      .hero-image-shell { inset: 15px 25px 18px 30px; }
+      .hero-orbit { top: 45px; }
+      .hero-bottom-note { display: none; }
+      .about-grid { grid-template-columns: 1fr; gap: 43px; }
+      .about-visual { min-height: 435px; width: min(100%, 630px); }
+      .about-copy { max-width: 700px; }
+      .strengths-head, .products-heading, .insights-head { align-items: flex-start; flex-direction: column; }
+      .strengths-head .section-lead, .products-heading .section-lead { margin-top: 0; }
+      .strength-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .strength-card, .strength-card:nth-child(4) { grid-column: auto; }
+      .strength-card:last-child { grid-column: 1 / -1; }
+      .product-grid { grid-template-columns: repeat(2, minmax(0,1fr)); grid-template-rows: 260px 220px 220px; }
+      .product-card:first-child { grid-row: span 2; }
+      .product-card:nth-child(4) { grid-column: 1 / -1; }
+      .ai-top { grid-template-columns: 1fr; gap: 23px; }
+      .ai-disclaimer { max-width: 620px; }
+      .manifesto-inner { grid-template-columns: 1fr; gap: 30px; }
+      .manifesto-copy { max-width: 700px; }
+      .contact-panel { grid-template-columns: 1fr; gap: 30px; }
+      .contact-actions { justify-self: start; width: min(100%, 360px); }
+    }
+    @media (max-width: 580px) {
+      :root { --header-height: 70px; --radius-lg: 22px; }
+      .container { width: calc(100% - 36px); }
+      .section { padding: 72px 0; }
+      .section-kicker { margin-bottom: 13px; font-size: .68rem; }
+      .section-title { font-size: clamp(1.85rem, 8vw, 2.55rem); }
+      .section-lead { margin-top: 15px; font-size: .94rem; line-height: 1.9; }
+      .brand-mark { width: 39px; height: 39px; }
+      .brand-name { font-size: .95rem; }
+      .brand-sub { font-size: .55rem; }
+      .hero { padding: calc(var(--header-height) + 37px) 0 54px; }
+      .hero-grid { gap: 14px; }
+      .eyebrow-pill { padding: 7px 10px; font-size: .68rem; }
+      .hero h1 { min-height: 3.5em; margin: 19px 0 16px; font-size: clamp(2.3rem, 10.6vw, 3.45rem); line-height: 1.24; letter-spacing: -.06em; }
+      .hero-description { font-size: .93rem; line-height: 1.9; }
+      .hero-actions { display: grid; grid-template-columns: 1fr; gap: 10px; margin-top: 23px; }
+      .hero-actions .btn { width: 100%; }
+      .hero-proof { gap: 10px 13px; margin-top: 23px; font-size: .7rem; }
+      .proof-divider { display: none; }
+      .hero-visual { min-height: 350px; margin-top: 8px; }
+      .hero-image-shell { inset: 16px 18px 15px 22px; border-width: 5px; border-radius: 37% 37% 22px 22px / 24% 24% 22px 22px; }
+      .hero-orbit { top: 30px; width: 280px; height: 280px; }
+      .float-card { gap: 8px; padding: 10px; border-radius: 14px; }
+      .float-card.card-quality { top: 24px; left: -1px; }
+      .float-card.card-flow { right: -1px; bottom: 40px; }
+      .float-icon { width: 34px; height: 34px; border-radius: 10px; }
+      .float-icon svg { width: 18px; height: 18px; }
+      .float-text strong { font-size: .72rem; }
+      .float-text small { font-size: .59rem; }
+      .hero-image-caption { left: 21px; right: 18px; bottom: 23px; }
+      .hero-image-caption span { font-size: .58rem; }
+      .hero-image-caption strong { font-size: 1rem; }
+      .about-grid { margin-top: 35px; }
+      .about-visual { min-height: 330px; }
+      .about-photo-main { right: 47px; bottom: 34px; border-radius: 23px; }
+      .about-photo-small { width: 48%; height: 39%; border-width: 5px; border-radius: 18px; }
+      .experience-tile { top: 15px; width: 116px; padding: 12px; border-radius: 15px; }
+      .experience-tile strong { font-size: 2rem; }
+      .experience-tile span { font-size: .65rem; }
+      .about-copy .section-title { font-size: 1.85rem; }
+      .about-copy p { margin-top: 15px; font-size: .9rem; }
+      .about-facilities { gap: 9px; margin-top: 21px; }
+      .facility-chip { align-items: flex-start; gap: 8px; padding: 11px 10px; border-radius: 13px; }
+      .facility-chip svg { width: 18px; height: 18px; }
+      .facility-chip strong { font-size: .82rem; }
+      .facility-chip small { font-size: .64rem; }
+      .strength-grid { grid-template-columns: 1fr; gap: 12px; margin-top: 30px; }
+      .solutions-grid { grid-template-columns: 1fr; gap: 12px; margin-top: 30px; }
+      .strength-card, .strength-card:last-child { grid-column: auto; min-height: auto; padding: 22px; }
+      .strength-top { margin-bottom: 16px; }
+      .strength-card p { font-size: .83rem; }
+      .product-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 230px 180px 180px 180px; gap: 10px; margin-top: 30px; }
+      .product-card:first-child { grid-column: 1 / -1; grid-row: auto; }
+      .product-card:nth-child(4) { grid-column: auto; }
+      .product-card:last-child { grid-column: 1 / -1; }
+      .product-overlay { left: 14px; right: 13px; bottom: 14px; }
+      .product-label { margin-bottom: 5px; font-size: .58rem; }
+      .product-overlay h3 { font-size: .96rem; }
+      .product-overlay p { font-size: .68rem; }
+      .ai-flow { justify-content: flex-start; gap: 7px; overflow-x: auto; padding: 2px 0 7px; font-size: .64rem; }
+      .flow-node { flex: none; padding: 7px 9px; }
+      .flow-line { flex: none; width: 16px; }
+      .ai-grid { grid-template-columns: 1fr; gap: 11px; }
+      .ai-card { min-height: auto; padding: 22px; }
+      .ai-card h3 { margin-top: 19px; }
+      .ai-card p { margin: 11px 0 17px; }
+      .ai-bottom-callout { align-items: flex-start; flex-direction: column; padding: 20px; }
+      .ai-bottom-callout .btn { width: 100%; }
+      .cases-grid { grid-template-columns: 1fr; gap: 12px; margin-top: 30px; }
+      .case-card { grid-template-columns: 43px 1fr; gap: 13px; padding: 18px; border-radius: 19px; }
+      .case-index { width: 42px; height: 42px; border-radius: 13px; font-size: .74rem; }
+      .case-card h3 { font-size: .98rem; }
+      .case-row { grid-template-columns: 65px 1fr; gap: 7px; font-size: .75rem; }
+      .insight-grid { grid-template-columns: 1fr; gap: 11px; margin-top: 28px; }
+      .insight-card { min-height: 0; padding: 20px; }
+      .insight-art { margin-bottom: 15px; }
+      .insight-card p { margin-bottom: 17px; }
+      .manifesto { padding: 74px 0; }
+      .manifesto-inner { gap: 25px; }
+      .manifesto h2 { font-size: 2.1rem; }
+      .manifesto-copy { padding-left: 20px; }
+      .manifesto-copy p { font-size: .88rem; }
+      .manifesto-values span { font-size: .7rem; padding: 7px 10px; }
+      .contact-section { padding: 68px 0 62px; }
+      .contact-panel { gap: 26px; padding: 27px 21px; border-radius: 25px; }
+      .contact-panel > .contact-social, .contact-panel > div:nth-child(2), .contact-panel > div:nth-child(3), .contact-panel > div:nth-child(4) { grid-column: auto; grid-row: auto; }
+      .contact-panel h2 { font-size: 2.15rem; }
+      .contact-panel p { font-size: .9rem; }
+      .contact-actions { width: 100%; }
+      .footer-inner { align-items: flex-start; flex-direction: column; gap: 16px; }
+      .footer-meta { text-align: left; }
+      .back-top { margin-left: 0; margin-top: 9px; }
+    }
+    /* Pikmin Bloom brand palette overrides */
+    body { color: #26372D; background: #FFFEF7; }
+    .section-soft, .section-soft, .contact-section { background: linear-gradient(180deg, #FFFEF7 0%, #E8F7EF 100%); }
+    .gradient-text { background: linear-gradient(110deg, #237A4B 6%, #4CC878 52%, #FFD451 100%); -webkit-background-clip: text; background-clip: text; }
+    .section-kicker, .text-link, .facility-chip svg, .proof-item svg { color: #237A4B; }
+    .section-kicker::before { background: #4CC878; }
+    .eyebrow-pill { border-color: rgba(76,200,120,.3); color: #237A4B; background: rgba(232,247,239,.82); }
+    .eyebrow-dot { background: #4CC878; box-shadow: 0 0 0 4px rgba(76,200,120,.16); }
+    .btn-primary { color: #FFFEF7; background: linear-gradient(110deg, #237A4B, #4CC878 72%); box-shadow: 0 12px 24px rgba(35,122,75,.2); }
+    .btn-primary:hover { box-shadow: 0 16px 32px rgba(35,122,75,.24), 0 0 0 4px rgba(255,212,81,.18); }
+    .btn-secondary { color: #26372D; border-color: rgba(35,122,75,.28); background: rgba(255,254,247,.82); }
+    .btn-secondary:hover { color: #237A4B; border-color: rgba(76,200,120,.65); }
+    .site-header { background: rgba(255,254,247,.86); }
+    .site-header.is-scrolled { border-color: rgba(216,232,218,.9); background: rgba(255,254,247,.95); }
+    .brand-mark { background: linear-gradient(140deg, #4CC878, #237A4B 78%); box-shadow: 0 7px 18px rgba(35,122,75,.22); }
+    .nav-link:hover, .nav-link.is-active { color: #237A4B; }
+    .nav-link::after { background: linear-gradient(90deg, #4CC878, #237A4B); }
+    .nav-cta { background: #237A4B; }
+    .nav-cta:hover { background: #4CC878; }
+    .hero { background: radial-gradient(ellipse at 73% 30%, rgba(223,242,251,.8) 0%, rgba(232,247,239,.46) 32%, transparent 60%), linear-gradient(135deg, #FFFEF7 0%, #F7FCF5 56%, #DFF2FB 100%); }
+    .hero::before { background-image: linear-gradient(rgba(76,200,120,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(76,200,120,.06) 1px, transparent 1px); }
+    .hero-orbit { border-color: rgba(76,200,120,.24); }
+    .hero-orbit::before { border-color: rgba(255,212,81,.34); }
+    .float-icon { color: #237A4B; background: linear-gradient(135deg, #E8F7EF, #DFF2FB); }
+    .float-icon.mint { color: #237A4B; background: #E8F7EF; }
+    .strength-card:hover, .solution-card:hover { border-color: rgba(76,200,120,.72); box-shadow: 0 28px 70px rgba(35,122,75,.14); }
+    .icon-tile, .solution-icon { color: #237A4B; background: linear-gradient(140deg, #E8F7EF, #DFF2FB); }
+    .icon-tile.mint, .solution-card:nth-child(2) .solution-icon { color: #237A4B; background: linear-gradient(140deg, #E8F7EF, #DFF2FB); }
+    .icon-tile.purple, .solution-card:nth-child(3) .solution-icon { color: #237A4B; background: linear-gradient(140deg, #E8F7EF, #FFF8D9); }
+    .product-card { background: linear-gradient(135deg, #DFF2FB, #E8F7EF); }
+    .contact-panel { background: linear-gradient(120deg, rgba(255,254,247,.97), rgba(232,247,239,.96)); box-shadow: 0 25px 80px rgba(35,122,75,.11); }
+    .contact-panel::before { background: radial-gradient(circle, rgba(76,200,120,.26), rgba(255,212,81,.18) 48%, transparent 70%); }
+    .social-link.line:hover, .social-link.line:focus-visible { color: #237A4B; border-color: rgba(76,200,120,.5); }
+    .site-footer { background: #237A4B; }
+    .manifesto { background: linear-gradient(115deg, #237A4B 0%, #319A61 52%, #4CC878 100%); }
+    .manifesto::before { background-image: linear-gradient(rgba(255,255,255,.16) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.16) 1px, transparent 1px); }
+    .manifesto::after { border-color: rgba(255,254,247,.25); box-shadow: 0 0 0 55px rgba(255,212,81,.09), 0 0 0 115px rgba(255,254,247,.06); }
+    .case-card, .insight-card, .ai-card { border-color: #D8E8DA; background: rgba(255,254,247,.9); }
+    .case-card:hover, .insight-card:hover, .ai-card:hover { border-color: rgba(76,200,120,.65); box-shadow: 0 28px 70px rgba(35,122,75,.13); }
+    .case-index { color: #237A4B; background: #E8F7EF; }
+    .case-tag, .insight-tag { color: #237A4B; background: #E8F7EF; }
+    .insight-art { color: #237A4B; background: linear-gradient(140deg, #E8F7EF, #DFF2FB); }
+    .insight-card:nth-child(2) .insight-art { color: #237A4B; background: #FFF8D9; }
+    .insight-card:nth-child(3) .insight-art { color: #237A4B; background: #E8F7EF; }
+    .insight-card:nth-child(4) .insight-art { color: #C45E4F; background: #FFF0EC; }
+    .ai-section { background: linear-gradient(180deg, #DFF2FB 0%, #FFFEF7 100%); }
+    .ai-card::before, .case-card::before { background: #4CC878; }
+    .product-card::after { background: linear-gradient(180deg, rgba(35,55,45,0) 24%, rgba(35,55,45,.72) 100%); }
+    .btn-status { color: #237A4B; background: #E8F7EF; border-color: #B8E3C5; }
+    .contact-note, .hero-proof, .section-lead, .solution-card p, .strength-card p { color: #5D7567; }
+    .footer-meta, .footer-meta a { color: #E8F7EF; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+      .js-ready .reveal { opacity: 1 !important; transform: none !important; }
+      .typing-cursor { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">跳至主要內容</a>
+
+  <!-- 導覽列：此處的圖形 Logo 為示意標記，正式上線可替換成公司核准的 Logo -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-wrap">
+      <a class="brand-lockup" href="#home" aria-label="屏榮食品首頁">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none"><path d="M7 22.5C10.5 20 12.3 16.1 12.3 9.5M12.3 14.8c-2.7-.1-4.4-1.5-5.2-4.3 3.5-.3 5.4 1.2 5.8 4.2M12.7 18.8c3.2-.4 5.4-2.3 6.2-5.7-3.9.1-6.1 2-6.7 5.8M16.7 24V8.2M16.7 12.4c2.2-2.3 4.6-2.6 7.2-1.1-.9 3.1-3.3 4.5-7.2 4.2M20.5 24h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span><span class="brand-name">屏榮食品</span><span class="brand-sub">PIN RONG FOOD</span></span>
+      </a>
+      <nav class="main-nav" aria-label="主要導覽">
+        <a class="nav-link" href="#about">關於屏榮</a>
+        <a class="nav-link" href="#strengths">核心優勢</a>
+        <a class="nav-link" href="#products">產品與製造</a>
+        <a class="nav-link" href="#ai-solutions">AI 解決方案</a>
+        <a class="nav-link" href="#cases">應用案例</a>
+        <a class="nav-link" href="#insights">科技觀點</a>
+        <a class="nav-link" href="#contact">聯絡我們</a>
+      </nav>
+      <a class="nav-cta" href="https://calendar.app.google/VCNiPia2MQFE4FHs8" target="_blank" rel="noopener noreferrer">預約諮詢 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="開啟選單" aria-expanded="false" aria-controls="mobileMenu">
+        <svg class="menu-icon-open" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <svg class="menu-icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true" hidden><path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-menu" id="mobileMenu" aria-label="手機版導覽" inert>
+      <a class="nav-link" href="#about">關於屏榮</a>
+      <a class="nav-link" href="#strengths">核心優勢</a>
+      <a class="nav-link" href="#products">產品與製造</a>
+      <a class="nav-link" href="#ai-solutions">AI 解決方案</a>
+      <a class="nav-link" href="#cases">應用案例</a>
+      <a class="nav-link" href="#insights">食品科技觀點</a>
+      <a class="nav-link" href="#contact">聯絡我們</a>
+      <a class="mobile-booking" href="https://calendar.app.google/VCNiPia2MQFE4FHs8" target="_blank" rel="noopener noreferrer">預約合作諮詢 <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- 01 首頁 Hero -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <canvas id="heroParticles" aria-hidden="true"></canvas>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow-pill"><span class="eyebrow-dot" aria-hidden="true"></span> FOOD × INTELLIGENCE <span style="color:#94A3B8">/</span> 食品專業與智慧科技</span>
+          <h1 id="hero-title"><span class="sr-only">從創意到量產，讓每一份美味更有競爭力</span><span class="typed-line gradient-text" id="typedHeadline" aria-hidden="true">從創意到量產，讓每一份美味更有競爭力</span><span class="typing-cursor" id="typingCursor" aria-hidden="true"></span></h1>
+          <p class="hero-description">結合食品研發、精準製造與智慧科技，從產品構想到穩定量產，為合作夥伴打造更具效率、品質與市場競爭力的食品解決方案。</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#ai-solutions">探索 AI 解決方案 <span class="btn-status" aria-hidden="true">Status: Ready to Connect</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a class="btn btn-secondary" href="https://calendar.app.google/VCNiPia2MQFE4FHs8" target="_blank" rel="noopener noreferrer">預約合作諮詢 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+          <div class="hero-proof" aria-label="品牌核心方向">
+            <span class="proof-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>食品安全與品質管理</span>
+            <span class="proof-divider" aria-hidden="true"></span>
+            <span class="proof-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3 4 7v5c0 5 3.4 7.8 8 9 4.6-1.2 8-4 8-9V7l-8-4Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m8.5 12 2.2 2.2 4.8-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>從研發到量產</span>
+            <span class="proof-divider" aria-hidden="true"></span>
+            <span class="proof-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 18V6m0 12h16M8 15V9m4 9V5m4 14v-8m4 8V7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>智慧應用與持續改善</span>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="食品研發與產品示意影像">
+          <div class="hero-orbit" aria-hidden="true"></div>
+          <div class="hero-image-shell">
+            <!-- 示意圖片：正式上線請替換為屏榮食品產品或廠區實景 -->
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1400&q=85" alt="色彩豐富的新鮮餐食，作為食品產品示意影像" fetchpriority="high">
+            <div class="hero-image-caption"><span>From idea to production</span><strong>把好點子，做成值得信賴的美味</strong></div>
+          </div>
+          <div class="float-card card-quality">
+            <span class="float-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3 4.5 6v5.5c0 4.4 3.1 7.7 7.5 9.5 4.4-1.8 7.5-5.1 7.5-9.5V6L12 3Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m8.5 12 2.2 2.2 4.8-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="float-text"><strong>Quality First</strong><small>以品質建立信任</small></span>
+          </div>
+          <div class="float-card card-flow">
+            <span class="float-icon mint"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h6v5H4zM14 12h6v5h-6zM10 9.5h4M12 9.5v5m0 0h2" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"/><circle cx="12" cy="9.5" r="1.2" fill="currentColor"/></svg></span>
+            <span class="float-text"><strong>Smart by Design</strong><small>以智慧思維持續改善</small></span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-bottom-note" aria-hidden="true">QUALITY · INNOVATION · TRUST</div>
+    </section>
+
+    <!-- 02 關於屏榮 -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-visual reveal">
+            <div class="about-photo-main">
+              <!-- 示意圖片：請替換為大溪廠、新豐廠或實際生產場景 -->
+              <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1100&q=85" alt="整潔明亮的食品備料工作檯示意照片" loading="lazy">
+            </div>
+            <div class="experience-tile"><strong>22<span style="font-size:1.2rem;letter-spacing:0">年</span></strong><span>建廠發展與經驗累積<br>持續精進製造專業</span></div>
+            <div class="about-photo-small">
+              <!-- 示意圖片：請替換為真實食品製程或品質作業照片 -->
+              <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=700&q=85" alt="食品製作流程示意照片" loading="lazy">
+            </div>
+          </div>
+          <div class="about-copy reveal reveal-delay-1">
+            <span class="section-kicker">ABOUT PIN RONG</span>
+            <h2 class="section-title" id="about-title">深耕食品製造，<br><span class="gradient-text">堅持品質，創造安心美味。</span></h2>
+            <p>屏榮食品股份有限公司深耕食品製造領域，大溪廠與新豐廠歷經 22 年的建廠發展與經驗累積，持續精進鮮食與調理食品的製造管理。</p>
+            <p>我們以食品安全為根本、以品質管理為核心，結合生產技術、低溫冷鏈管理與產品研發，致力於為消費者與合作夥伴提供新鮮、美味、安全且值得信賴的食品。</p>
+            <div class="about-facilities">
+              <div class="facility-chip"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 21V8l6 3V8l6 3V4h6v17H3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M7 15h2m3 0h2m3 0h2M7 18h2m3 0h2m3 0h2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span><strong>大溪廠</strong><small>食品製造基地</small></span></div>
+              <div class="facility-chip"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 21V8l6 3V8l6 3V4h6v17H3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M7 15h2m3 0h2m3 0h2M7 18h2m3 0h2m3 0h2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span><strong>新豐廠</strong><small>食品製造基地</small></span></div>
+            </div>
+            <a class="text-link" href="#strengths">認識我們的核心優勢 <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 核心優勢 -->
+    <section class="section section-soft" id="strengths" aria-labelledby="strengths-title">
+      <div class="container">
+        <div class="strengths-head reveal">
+          <div><span class="section-kicker">WHY PIN RONG</span><h2 class="section-title" id="strengths-title">從每一道細節，<br>累積值得信賴的實力。</h2></div>
+          <p class="section-lead">從產品開發、生產管理到冷鏈供應，以食品專業為根本，持續精進品質、效率與合作體驗。</p>
+        </div>
+        <div class="strength-grid">
+          <article class="strength-card reveal">
+            <div class="strength-top"><span class="icon-tile"><svg width="25" height="25" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3 4.5 6v5.5c0 4.4 3.1 7.7 7.5 9.5 4.4-1.8 7.5-5.1 7.5-9.5V6L12 3Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m8.5 12 2.2 2.2 4.8-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="card-number">01 / 05</span></div>
+            <h3>深耕產業，累積專業實力</h3><p>以建廠發展經驗與生產管理基礎為後盾，持續優化製程、設備與作業流程，重視生產效率及產品穩定性。</p>
+          </article>
+          <article class="strength-card reveal reveal-delay-1">
+            <div class="strength-top"><span class="icon-tile purple"><svg width="25" height="25" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 8.5 12 4l8 4.5v7L12 20l-8-4.5v-7Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m4.5 8.7 7.5 4.4 7.5-4.4M12 13.1V20" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span><span class="card-number">02 / 05</span></div>
+            <h3>多元產品，回應市場需求</h3><p>涵蓋鮮食便當、御飯糰、壽司、三明治、手作甜點及冷凍調理食品，回應不同通路與產品開發需求。</p>
+          </article>
+          <article class="strength-card reveal reveal-delay-2">
+            <div class="strength-top"><span class="icon-tile mint"><svg width="25" height="25" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3 4.5 6v5.5c0 4.4 3.1 7.7 7.5 9.5 4.4-1.8 7.5-5.1 7.5-9.5V6L12 3Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M8 12h8M12 8v8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span><span class="card-number">03 / 05</span></div>
+            <h3>嚴謹食安，落實品質承諾</h3><p>廠區通過 HACCP 與 ISO 22000 食品安全管理體系認證，從原料管理、生產加工到成品管控，重視衛生標準與關鍵製程管理。</p>
+          </article>
+          <article class="strength-card reveal">
+            <div class="strength-top"><span class="icon-tile purple"><svg width="25" height="25" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3" stroke="currentColor" stroke-width="1.7"/><path d="M7 9h3v3H7zM14 8h3M14 12h3M7 16h10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="card-number">04 / 05</span></div>
+            <h3>智慧製程，持續創新升級</h3><p>結合現代化生產設備與標準化作業流程，持續精進製造管理及生產技術，提升產品一致性與作業效率。</p>
+          </article>
+          <article class="strength-card reveal reveal-delay-1">
+            <div class="strength-top"><span class="icon-tile mint"><svg width="25" height="25" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 7h11v10H3zM14 10h4l3 3v4h-7z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="7.5" cy="18" r="2" stroke="currentColor" stroke-width="1.7"/><circle cx="17.5" cy="18" r="2" stroke="currentColor" stroke-width="1.7"/><path d="M6 10h5m-5 3h3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span><span class="card-number">05 / 05</span></div>
+            <h3>冷鏈物流，提升供應效率</h3><p>以桃園大溪及新豐的區位條件為基礎，搭配低溫溫控管理與冷鏈配送機制，強化北部市場的供應協作。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 產品與製造 -->
+    <section class="section" id="products" aria-labelledby="products-title">
+      <div class="container">
+        <div class="products-heading reveal">
+          <div><span class="section-kicker">PRODUCTS & CAPABILITIES</span><h2 class="section-title" id="products-title">多元食品製造能力，<br><span class="gradient-text">成就更多美味可能。</span></h2></div>
+          <p class="section-lead">從日常鮮食到甜點與調理食品，理解不同品類的製程特性，以專業協作支持產品開發與量產需求。</p>
+        </div>
+        <div class="product-grid">
+          <article class="product-card reveal">
+            <!-- 示意圖片：正式上線請換成實際產品照片 -->
+            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=85" alt="餐盒與多樣配菜的食品類別示意" loading="lazy">
+            <div class="product-overlay"><span class="product-label">FRESH MEALS</span><h3>便利商店鮮食便當</h3><p>兼顧風味、製程穩定與供應節奏</p></div>
+          </article>
+          <article class="product-card reveal reveal-delay-1">
+            <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=800&q=85" alt="壽司食品類別示意" loading="lazy">
+            <div class="product-overlay"><span class="product-label">RICE & SUSHI</span><h3>御飯糰與壽司</h3><p>重視新鮮度與操作標準</p></div>
+          </article>
+          <article class="product-card reveal reveal-delay-2">
+            <img src="https://images.unsplash.com/photo-1553909489-cd47e0ef937f?auto=format&fit=crop&w=800&q=85" alt="三明治食品類別示意" loading="lazy">
+            <div class="product-overlay"><span class="product-label">SANDWICH</span><h3>三明治</h3><p>多元搭配與產品開發協作</p></div>
+          </article>
+          <article class="product-card reveal">
+            <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=1200&q=85" alt="杯裝甜點食品類別示意" loading="lazy">
+            <div class="product-overlay"><span class="product-label">DESSERTS</span><h3>手作甜點</h3><p>以細緻口感與製程管理呈現甜點特色</p></div>
+          </article>
+          <article class="product-card reveal reveal-delay-1">
+            <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=900&q=85" alt="均衡餐食與備餐食材示意" loading="lazy">
+            <div class="product-overlay"><span class="product-label">PREPARED FOOD</span><h3>冷凍調理食品</h3><p>支援便利、彈性的餐食需求</p></div>
+          </article>
+        </div>
+        <p class="image-note"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 11v5m0-8h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>本區圖片為食品類別示意素材，非屏榮食品正式商品或實際廠區照片；正式上線前建議替換為經公司確認的影像。</p>
+      </div>
+    </section>
+
+    <!-- 05 AI 智慧解決方案 -->
+    <section class="section ai-section" id="ai-solutions" aria-labelledby="ai-title">
+      <div class="container" style="position:relative;z-index:1">
+        <div class="ai-top reveal">
+          <div><span class="section-kicker">AI SMART SOLUTIONS</span><h2 class="section-title" id="ai-title">AI 解決方案｜<br><span class="gradient-text">智慧賦能食品創新，</span><br>打造高效供應鏈。</h2></div>
+          <div><p class="section-lead">整合食品研發、客製化製造、品質管理與冷鏈物流專業，結合 AI 智慧分析與數位化管理思維，協助評估產品開發、流程優化與供應鏈管理的更多可能。</p><div class="ai-disclaimer" style="margin-top:18px"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M12 11v5m0-8h.01" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span>以下為 AI 應用方向與服務定位示意；實際可用功能、資料條件及導入範圍，需依合作需求另行評估。</span></div></div>
+        </div>
+        <div class="ai-flow reveal" aria-label="AI 應用流程概念：產品需求、數據整合、分析與改善">
+          <span class="flow-node"><span></span>產品需求</span><i class="flow-line" aria-hidden="true"></i><span class="flow-node"><span></span>數據整合</span><i class="flow-line" aria-hidden="true"></i><span class="flow-node"><span></span>分析與洞察</span><i class="flow-line" aria-hidden="true"></i><span class="flow-node"><span></span>改善決策</span>
+        </div>
+        <div class="ai-grid">
+          <article class="ai-card reveal">
+            <div class="ai-card-head"><span class="icon-tile"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1m0-12.8-2.1 2.1m-8.6 8.6-2.1 2.1" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg></span><span class="ai-card-code">01 / R&D</span></div>
+            <h3>智慧研發</h3><span class="en-label">SMART R&D</span><p>以數據分析輔助配方優化、風味調整與成本評估，協助梳理產品概念、驗證需求與新品導入流程。</p><a class="ai-card-link" href="#contact" aria-label="洽詢智慧研發方案">洽詢此方案 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </article>
+          <article class="ai-card reveal reveal-delay-1">
+            <div class="ai-card-head"><span class="icon-tile purple"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3" stroke="currentColor" stroke-width="1.7"/><path d="M7 8h3v3H7zM14 8h3M14 11h3M7 15h10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="ai-card-code">02 / MFG</span></div>
+            <h3>智慧製造</h3><span class="en-label">SMART MANUFACTURING</span><p>結合標準化製程與數位管理思維，評估生產排程、產能配置及原料使用的改善機會，支援 OEM／ODM 多元需求。</p><a class="ai-card-link" href="#contact" aria-label="洽詢智慧製造方案">洽詢此方案 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </article>
+          <article class="ai-card reveal reveal-delay-2">
+            <div class="ai-card-head"><span class="icon-tile mint"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3 4.5 6v5.5c0 4.4 3.1 7.7 7.5 9.5 4.4-1.8 7.5-5.1 7.5-9.5V6L12 3Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m8.5 12 2.2 2.2 4.8-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="ai-card-code">03 / QA</span></div>
+            <h3>智慧品管</h3><span class="en-label">SMART QUALITY ASSURANCE</span><p>整合品質檢驗、原料履歷、製程紀錄及保存期限測試等資訊，輔助異常辨識、風險評估與品質追蹤。</p><a class="ai-card-link" href="#contact" aria-label="洽詢智慧品管方案">洽詢此方案 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </article>
+          <article class="ai-card reveal reveal-delay-3">
+            <div class="ai-card-head"><span class="icon-tile"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 7h11v10H3zM14 10h4l3 3v4h-7z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="7.5" cy="18" r="2" stroke="currentColor" stroke-width="1.7"/><circle cx="17.5" cy="18" r="2" stroke="currentColor" stroke-width="1.7"/><path d="M6 10h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span><span class="ai-card-code">04 / SCM</span></div>
+            <h3>智慧供應鏈</h3><span class="en-label">SMART SUPPLY CHAIN</span><p>透過需求與訂單資料分析、溫控資料管理等方向，協助評估資源調度、供應風險與季節需求應變。</p><a class="ai-card-link" href="#contact" aria-label="洽詢智慧供應鏈方案">洽詢此方案 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </article>
+        </div>
+        <div class="ai-bottom-callout reveal"><div><strong>科技不是目的，讓工作更順暢、決策更有依據才是關鍵。</strong><p>一起盤點需求、資料條件與適合的導入步驟，從可行的小改善開始。</p></div><a class="btn btn-primary" href="https://calendar.app.google/VCNiPia2MQFE4FHs8" target="_blank" rel="noopener noreferrer">討論適合的方案 <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+      </div>
+    </section>
+
+    <!-- 06 應用情境：尚未提供正式客戶案例，以下明確標示為情境示範 -->
+    <section class="section" id="cases" aria-labelledby="cases-title">
+      <div class="container">
+        <div class="reveal"><span class="section-kicker">APPLICATION SCENARIOS</span><h2 class="section-title" id="cases-title">從日常營運出發，<br><span class="gradient-text">找出可持續改善的切入點。</span></h2><p class="section-lead">將食品製造與供應鏈常見需求拆解成可討論的流程，評估適合的數據、工具與合作方式。</p></div>
+        <div class="cases-grid">
+          <article class="case-card reveal"><div class="case-index">01</div><div><h3>新品開發與量產導入</h3><span class="case-tag">PRODUCT DEVELOPMENT</span><div class="case-rows"><div class="case-row"><strong>面對需求</strong><span>新品構想、成本目標與量產條件需要跨部門協作。</span></div><div class="case-row"><strong>可評估方向</strong><span>整理配方、試作紀錄、原料規格與評估項目，建立較一致的開發資訊。</span></div><div class="case-row"><strong>預期價值</strong><span>降低資訊往返成本，協助團隊更清楚地追蹤開發節點。</span></div></div></div></article>
+          <article class="case-card reveal reveal-delay-1"><div class="case-index">02</div><div><h3>生產排程與產能配置</h3><span class="case-tag">PRODUCTION PLANNING</span><div class="case-rows"><div class="case-row"><strong>面對需求</strong><span>訂單變化、產線負荷與人力安排需要同步考量。</span></div><div class="case-row"><strong>可評估方向</strong><span>盤點訂單、工時、產能及換線條件，探索排程輔助與情境分析。</span></div><div class="case-row"><strong>預期價值</strong><span>讓資源配置與排程討論更有依據，及早辨識可能的瓶頸。</span></div></div></div></article>
+          <article class="case-card reveal"><div class="case-index">03</div><div><h3>品質資訊整合與異常追蹤</h3><span class="case-tag">QUALITY TRACEABILITY</span><div class="case-rows"><div class="case-row"><strong>面對需求</strong><span>檢驗、原料與製程紀錄分散，事件追查需要人工彙整。</span></div><div class="case-row"><strong>可評估方向</strong><span>建立欄位與紀錄規範，評估履歷串接、異常分類與追蹤流程。</span></div><div class="case-row"><strong>預期價值</strong><span>提升資料整理效率及問題回溯時的資訊完整度。</span></div></div></div></article>
+          <article class="case-card reveal reveal-delay-1"><div class="case-index">04</div><div><h3>需求分析與冷鏈供應管理</h3><span class="case-tag">SUPPLY CHAIN</span><div class="case-rows"><div class="case-row"><strong>面對需求</strong><span>季節、促銷與通路訂單波動會影響備料、生產與配送。</span></div><div class="case-row"><strong>可評估方向</strong><span>分析歷史訂單、需求變化與溫控紀錄，梳理預警及協調機制。</span></div><div class="case-row"><strong>預期價值</strong><span>協助提早發現需求變化，提升供需協調的透明度。</span></div></div></div></article>
+        </div>
+        <p class="case-disclaimer">以上均為應用情境示範，非已完成的客戶專案或成效承諾；實際作法須依資料品質、流程條件與專案範圍評估。</p>
+      </div>
+    </section>
+
+    <!-- 07 食品科技觀點：內容主題預覽，不建立無效文章連結 -->
+    <section class="section section-soft" id="insights" aria-labelledby="insights-title">
+      <div class="container">
+        <div class="insights-head reveal"><div><span class="section-kicker">FOOD TECH INSIGHTS</span><h2 class="section-title" id="insights-title">讓食品專業，持續與新知對話。</h2><p class="section-lead">聚焦食品研發、智慧製造、食品安全與供應鏈管理，整理值得關注的實務議題。</p></div></div>
+        <div class="insight-grid">
+          <article class="insight-card reveal"><span class="insight-art"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1m0-12.8-2.1 2.1m-8.6 8.6-2.1 2.1" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.7"/></svg></span><span class="insight-tag">研發創新</span><h3>AI 如何協助食品研發與新品開發？</h3><p>從產品需求整理到試作資料分析，理解數據工具可以如何輔助研發流程。</p><span class="insight-status">主題預覽｜正式文章待發布</span></article>
+          <article class="insight-card reveal reveal-delay-1"><span class="insight-art"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3" stroke="currentColor" stroke-width="1.7"/><path d="M7 8h3v3H7zM14 8h3M14 11h3M7 15h10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="insight-tag">智慧製造</span><h3>智慧製造如何改善生產流程管理？</h3><p>盤點製程、工時與產能資料，找出適合數位化與持續改善的環節。</p><span class="insight-status">主題預覽｜正式文章待發布</span></article>
+          <article class="insight-card reveal reveal-delay-2"><span class="insight-art"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3 4.5 6v5.5c0 4.4 3.1 7.7 7.5 9.5 4.4-1.8 7.5-5.1 7.5-9.5V6L12 3Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m8.5 12 2.2 2.2 4.8-5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="insight-tag">食品安全</span><h3>食品安全與數位化品質追蹤</h3><p>從資料一致性、紀錄規範到異常追蹤，思考如何建立透明的管理流程。</p><span class="insight-status">主題預覽｜正式文章待發布</span></article>
+          <article class="insight-card reveal reveal-delay-3"><span class="insight-art"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 7h11v10H3zM14 10h4l3 3v4h-7z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="7.5" cy="18" r="2" stroke="currentColor" stroke-width="1.7"/><circle cx="17.5" cy="18" r="2" stroke="currentColor" stroke-width="1.7"/></svg></span><span class="insight-tag">供應鏈</span><h3>需求預測與冷鏈供應鏈的應用</h3><p>了解訂單波動、溫控資料與跨部門協作如何成為改善工作的起點。</p><span class="insight-status">主題預覽｜正式文章待發布</span></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08 品牌承諾 -->
+    <section class="manifesto" aria-labelledby="manifesto-title">
+      <div class="container manifesto-inner">
+        <div class="reveal"><span class="section-kicker">OUR PROMISE</span><h2 id="manifesto-title">每一份美味，<br>都值得被認真對待。</h2></div>
+        <div class="manifesto-copy reveal reveal-delay-1"><div class="manifesto-values"><span>品質為本</span><span>食安為先</span><span>創新為動力</span><span>服務為承諾</span></div><p>屏榮食品持續深化食品製造專業，與合作夥伴建立長期、穩定且互信的合作關係。我們相信，每一份食品不只是美味的呈現，更承載著對品質的堅持與對消費者的責任。未來也將持續精進製造技術、提升管理效能，以專業與創新打造更具競爭力的食品供應體系。</p></div>
+      </div>
+    </section>
+
+    <!-- 09 聯絡與預約 -->
+    <section class="section solutions-section" id="solutions" aria-labelledby="solutions-title">
+      <div class="container">
+        <div class="reveal">
+          <span class="section-kicker">CORE PRODUCTS &amp; TECHNICAL SOLUTIONS</span>
+          <h2 class="section-title" id="solutions-title">核心產品與技術解決方案</h2>
+          <p class="section-lead">從產品概念、配方研發到量產與合規規劃，提供完整且彈性的食品專業服務。</p>
+        </div>
+        <div class="solutions-grid">
+          <article class="solution-card reveal">
+            <span class="solution-icon" aria-hidden="true"><i class="fa-solid fa-flask-vial"></i></span>
+            <h3>客製化產品研發<br><span>(R&amp;D &amp; Customized Product Development)</span></h3>
+            <p>配方開發與調整、風味與質地調校、健康與特殊需求配方</p>
+          </article>
+          <article class="solution-card reveal reveal-delay-1">
+            <span class="solution-icon" aria-hidden="true"><i class="fa-solid fa-industry"></i></span>
+            <h3>食品代工與量產服務<br><span>(OEM / ODM Manufacturing)</span></h3>
+            <p>OEM 代工生產、ODM 設計代工、多樣化加工技術（熱加工／烹調、成型與充填、急凍與保鮮）</p>
+          </article>
+          <article class="solution-card reveal reveal-delay-2">
+            <span class="solution-icon" aria-hidden="true"><i class="fa-solid fa-clipboard-check"></i></span>
+            <h3>專業規劃服務</h3>
+            <p>食品安全與品質管制規劃、供應鏈與冷鏈物流規劃、法規諮詢與標籤標示審查</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact-panel reveal">
+          <div class="contact-social" aria-label="社群連結">
+            <a class="social-link line" href="https://line.me/ti/p/1esh7ZHmXY" target="_blank" rel="noopener noreferrer" aria-label="LINE"><i class="fa-brands fa-line" aria-hidden="true"></i></a>
+            <a class="social-link facebook" href="https://www.facebook.com/MarketingDataScienceTMR/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+            <a class="social-link linkedin" href="https://www.linkedin.com/in/howardzhong/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+            <a class="social-link github" href="https://github.com/HowardNTUST" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+          </div>
+          <div>
+            <span class="form-label">填寫需求表單</span>
+            <a class="btn btn-secondary" href="https://docs.google.com/forms/d/e/1FAIpQLSdcTB1kQOIRlH8cdTHzkTpumWYsqaOxbC7wQWzLmB2KbvDPAw/viewform?usp=header" target="_blank" rel="noopener noreferrer">填寫需求表單 <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+          </div>
+          <div><span class="section-kicker">LET'S BUILD WHAT'S NEXT</span><h2 id="contact-title">讓下一個好點子，<br><span class="gradient-text">成為真正的產品。</span></h2><p>從食品研發到智慧製造，與屏榮食品展開合作，打造更具競爭力的產品與供應鏈。讓我們一起釐清需求，探索合適的合作方向。</p></div>
+          <div class="contact-actions"><a class="btn btn-primary" href="https://calendar.app.google/VCNiPia2MQFE4FHs8" target="_blank" rel="noopener noreferrer">預約合作諮詢 <span class="btn-status" aria-hidden="true">Status: Ready to Connect</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="btn btn-secondary" href="#ai-solutions">探索 AI 解決方案 <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a><div class="contact-note"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 11v5m0-8h.01" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span>目前以 Google Calendar 作為預約入口；電話、電子郵件與聯絡表單待公司確認後再加入。</span></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="footer-brand" href="#home" aria-label="返回屏榮食品首頁"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M7 22.5C10.5 20 12.3 16.1 12.3 9.5M12.3 14.8c-2.7-.1-4.4-1.5-5.2-4.3 3.5-.3 5.4 1.2 5.8 4.2M12.7 18.8c3.2-.4 5.4-2.3 6.2-5.7-3.9.1-6.1 2-6.7 5.8M16.7 24V8.2M16.7 12.4c2.2-2.3 4.6-2.6 7.2-1.1-.9 3.1-3.3 4.5-7.2 4.2M20.5 24h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>屏榮食品股份有限公司</strong><small>PIN RONG FOOD</small></span></a>
+      <div class="footer-meta"><p>品質為本 · 食安為先 · 創新為動力 · 服務為承諾</p><p>© <span id="currentYear">2026</span> 屏榮食品股份有限公司 <a class="back-top" href="#home">回到頁首 ↑</a></p></div>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      'use strict';
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const header = document.getElementById('siteHeader');
+      const menuToggle = document.getElementById('menuToggle');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const openIcon = menuToggle?.querySelector('.menu-icon-open');
+      const closeIcon = menuToggle?.querySelector('.menu-icon-close');
+      const typedHeadline = document.getElementById('typedHeadline');
+      const typingCursor = document.getElementById('typingCursor');
+      const fullHeadline = '從創意到量產，讓每一份美味更有競爭力';
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+      // 導覽列捲動狀態
+      const updateHeader = () => header.classList.toggle('is-scrolled', window.scrollY > 12);
+      updateHeader();
+      window.addEventListener('scroll', updateHeader, { passive: true });
+
+      // 手機選單：支援按鈕、點選導覽連結及 Escape 鍵關閉
+      const closeMenu = () => {
+        mobileMenu.classList.remove('is-open');
+        mobileMenu.setAttribute('inert', '');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-label', '開啟選單');
+        document.body.classList.remove('menu-open');
+        if (openIcon) openIcon.hidden = false;
+        if (closeIcon) closeIcon.hidden = true;
+      };
+      const openMenu = () => {
+        mobileMenu.classList.add('is-open');
+        mobileMenu.removeAttribute('inert');
+        menuToggle.setAttribute('aria-expanded', 'true');
+        menuToggle.setAttribute('aria-label', '關閉選單');
+        document.body.classList.add('menu-open');
+        if (openIcon) openIcon.hidden = true;
+        if (closeIcon) closeIcon.hidden = false;
+      };
+      menuToggle?.addEventListener('click', () => menuToggle.getAttribute('aria-expanded') === 'true' ? closeMenu() : openMenu());
+      mobileMenu?.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+      document.addEventListener('keydown', event => { if (event.key === 'Escape' && mobileMenu.classList.contains('is-open')) { closeMenu(); menuToggle.focus(); } });
+      window.addEventListener('resize', () => { if (window.innerWidth > 900) closeMenu(); }, { passive: true });
+
+      // 打字機：完整標題在可及性樹與無 JavaScript 情境中始終可讀
+      if (typedHeadline && !reduceMotion) {
+        const startTyping = () => {
+          typedHeadline.textContent = '';
+          let index = 0;
+          const delay = 78;
+          const typeNext = () => {
+            if (index < fullHeadline.length) {
+              typedHeadline.textContent += fullHeadline.charAt(index);
+              index += 1;
+              window.setTimeout(typeNext, delay);
+            } else if (typingCursor) {
+              typingCursor.style.animationIterationCount = 'infinite';
+            }
+          };
+          typeNext();
+        };
+        // 短暫延遲避免頁面初次繪製時發生突然清空的閃動
+        window.setTimeout(startTyping, 260);
+      } else if (typingCursor) {
+        typingCursor.style.display = 'none';
+      }
+
+      // 滾動進場：只有在 IntersectionObserver 可用且未減少動態效果時才隱藏至進場
+      const revealItems = document.querySelectorAll('.reveal');
+      if (!reduceMotion && 'IntersectionObserver' in window && revealItems.length) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
+        document.body.classList.add('js-ready');
+        revealItems.forEach(item => revealObserver.observe(item));
+      } else {
+        revealItems.forEach(item => item.classList.add('is-visible'));
+      }
+
+      // 依照目前可視區塊更新主導覽狀態
+      const sectionLinks = Array.from(document.querySelectorAll('.main-nav .nav-link'));
+      const trackedSections = sectionLinks.map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+      if ('IntersectionObserver' in window) {
+        const sectionObserver = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              sectionLinks.forEach(link => link.classList.toggle('is-active', link.getAttribute('href') === `#${entry.target.id}`));
+              document.querySelectorAll('.mobile-menu .nav-link').forEach(link => link.classList.toggle('is-active', link.getAttribute('href') === `#${entry.target.id}`));
+            }
+          });
+        }, { rootMargin: '-28% 0px -62% 0px', threshold: 0 });
+        trackedSections.forEach(section => sectionObserver.observe(section));
+      }
+
+      // 外部圖片失敗時，保留柔和備援底色並清楚標示可替換
+      document.querySelectorAll('.hero-image-shell, .about-photo-main, .about-photo-small, .product-card').forEach(frame => {
+        const img = frame.querySelector('img');
+        if (!img) return;
+        const setFallback = () => frame.classList.add('image-fallback');
+        img.addEventListener('error', setFallback, { once: true });
+        if (img.complete && img.naturalWidth === 0) setFallback();
+      });
+
+      // Hero Canvas 粒子：暫停背景分頁與畫面外動畫，降低資源消耗
+      const canvas = document.getElementById('heroParticles');
+      const hero = document.querySelector('.hero');
+      if (canvas && hero) {
+        const ctx = canvas.getContext('2d');
+        if (ctx) {
+          let width = 0, height = 0, dpr = 1, rafId = 0, inView = true;
+          let particles = [];
+          const makeParticles = () => {
+            const count = window.innerWidth < 600 ? 15 : window.innerWidth < 1000 ? 23 : 34;
+            particles = Array.from({ length: count }, () => ({
+              x: Math.random() * width,
+              y: Math.random() * height,
+              vx: (Math.random() - .5) * .13,
+              vy: (Math.random() - .5) * .13,
+              r: Math.random() * 1.7 + .7
+            }));
+          };
+          const resizeCanvas = () => {
+            const rect = hero.getBoundingClientRect();
+            dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+            width = Math.max(1, rect.width); height = Math.max(1, rect.height);
+            canvas.width = Math.round(width * dpr); canvas.height = Math.round(height * dpr);
+            canvas.style.width = `${width}px`; canvas.style.height = `${height}px`;
+            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+            makeParticles(); drawFrame(!reduceMotion);
+          };
+          const drawFrame = (move = true) => {
+            ctx.clearRect(0, 0, width, height);
+            if (move) particles.forEach(p => {
+              p.x += p.vx; p.y += p.vy;
+              if (p.x < 0 || p.x > width) p.vx *= -1;
+              if (p.y < 0 || p.y > height) p.vy *= -1;
+            });
+            const maxDistance = window.innerWidth < 600 ? 90 : 135;
+            for (let i = 0; i < particles.length; i++) {
+              const p = particles[i];
+              ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2); ctx.fillStyle = 'rgba(64, 111, 209, .27)'; ctx.fill();
+              for (let j = i + 1; j < particles.length; j++) {
+                const q = particles[j]; const dx = p.x - q.x; const dy = p.y - q.y; const dist = Math.hypot(dx, dy);
+                if (dist < maxDistance) {
+                  ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y);
+                  ctx.strokeStyle = `rgba(91, 123, 205, ${.105 * (1 - dist / maxDistance)})`;
+                  ctx.lineWidth = 1; ctx.stroke();
+                }
+              }
+            }
+          };
+          const animate = () => {
+            rafId = 0;
+            if (document.hidden || !inView || reduceMotion) return;
+            drawFrame(true);
+            rafId = window.requestAnimationFrame(animate);
+          };
+          const startAnimation = () => { if (!reduceMotion && !document.hidden && inView && !rafId) rafId = window.requestAnimationFrame(animate); };
+          const stopAnimation = () => { if (rafId) { window.cancelAnimationFrame(rafId); rafId = 0; } };
+          resizeCanvas();
+          if ('IntersectionObserver' in window) {
+            const canvasObserver = new IntersectionObserver(entries => {
+              inView = entries[0].isIntersecting;
+              if (inView) startAnimation(); else stopAnimation();
+            }, { threshold: 0.01 });
+            canvasObserver.observe(hero);
+          }
+          window.addEventListener('resize', resizeCanvas, { passive: true });
+          document.addEventListener('visibilitychange', () => { if (document.hidden) stopAnimation(); else startAnimation(); });
+          if (!reduceMotion) startAnimation();
+        }
+      }
+    })();
+  </script>
+</body>
+</html>
