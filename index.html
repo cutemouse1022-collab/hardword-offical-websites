@@ -3,28 +3,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f8fbff">
-  <meta name="description" content="屏榮食品以食品製造、品質管理與產品研發為基礎，結合 AI 智慧應用思維，陪伴合作夥伴從產品創意走向穩定量產。">
-  <meta property="og:title" content="屏榮食品｜從創意到量產，讓每一份美味更有競爭力">
-  <meta property="og:description" content="結合食品研發、精準製造與智慧科技，打造更具效率、品質與市場競爭力的食品解決方案。">
+  <meta name="theme-color" content="#237A4B">
+  <meta name="author" content="屏榮食品股份有限公司">
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="屏榮食品提供食品研發、OEM／ODM 代工、量產製造、食品安全與冷鏈規劃服務，協助品牌從產品創意走向穩定量產。">
+  <meta property="og:title" content="屏榮食品｜食品研發、OEM／ODM 與量產製造">
+  <meta property="og:description" content="從配方研發、食品代工到量產與品質管理，屏榮食品以專業製造能力，協助合作夥伴打造安全、美味且穩定的產品。">
+  <meta property="og:locale" content="zh_TW">
+  <meta name="twitter:card" content="summary">
   <meta property="og:type" content="website">
   <title>屏榮食品｜從創意到量產，讓每一份美味更有競爭力</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: { blue: '#2563EB', purple: '#7C3AED', mint: '#10B981', ink: '#0F172A', muted: '#64748B', mist: '#F8FAFC' }
-          },
-          fontFamily: { sans: ['Inter', 'Noto Sans TC', 'system-ui', 'sans-serif'] }
-        }
-      }
-    };
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "屏榮食品股份有限公司",
+      "description": "提供食品研發、OEM／ODM 代工、量產製造、食品安全與冷鏈規劃服務。",
+      "areaServed": "TW",
+      "knowsAbout": ["食品研發", "食品代工", "量產製造", "食品安全", "冷鏈物流"]
+    }
   </script>
   <style>
     :root {
@@ -48,8 +49,8 @@
     html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-height) + 20px); }
     body {
       margin: 0; color: var(--ink); background: var(--white);
-      font-family: Inter, "Noto Sans TC", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.7; letter-spacing: .005em; overflow-x: clip;
+      font-family: "Noto Sans TC", system-ui, sans-serif;
+      line-height: 1.8; letter-spacing: .01em; overflow-x: clip;
       -webkit-font-smoothing: antialiased;
     }
     body.menu-open { overflow: hidden; }
@@ -296,6 +297,21 @@
     .social-link.github:hover, .social-link.github:focus-visible { color: #24292F; border-color: rgba(36,41,47,.35); }
     .form-label { margin: 2px 0 -3px; color: #526076; font-size: .76rem; font-weight: 800; letter-spacing: .04em; }
     .contact-note { display: flex; justify-content: center; align-items: flex-start; gap: 8px; margin-top: 5px; color: #8290A5; font-size: .7rem; line-height: 1.65; }
+    .people-strip { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 24px; }
+    .person-card { position: relative; min-width: 0; overflow: hidden; border: 1px solid #D8E8DA; border-radius: 20px; background: #FFFEF7; box-shadow: 0 12px 30px rgba(35,122,75,.07); }
+    .person-card img { width: 100%; height: 185px; object-fit: cover; object-position: center 35%; transition: transform .5s ease; }
+    .person-card:hover img { transform: scale(1.05); }
+    .person-card figcaption { padding: 12px 14px 14px; color: #237A4B; font-size: .82rem; font-weight: 800; }
+    .activity-section { background: linear-gradient(180deg, #E8F7EF 0%, #FFFEF7 100%); }
+    .activity-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); grid-auto-rows: 190px; gap: 14px; margin-top: 48px; }
+    .activity-card { position: relative; grid-column: span 3; min-width: 0; overflow: hidden; border-radius: 22px; background: #DFF2FB; box-shadow: 0 12px 30px rgba(35,122,75,.08); isolation: isolate; }
+    .activity-card:nth-child(1), .activity-card:nth-child(4) { grid-column: span 6; }
+    .activity-card img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s cubic-bezier(.2,.75,.25,1), filter .4s ease; }
+    .activity-card:hover img { transform: scale(1.07); filter: saturate(1.08); }
+    .activity-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 42%, rgba(35,55,45,.72) 100%); pointer-events: none; }
+    .activity-caption { position: absolute; z-index: 1; right: 18px; bottom: 16px; left: 18px; color: #FFFEF7; }
+    .activity-caption strong { display: block; font-size: .95rem; line-height: 1.4; }
+    .activity-caption span { display: block; margin-top: 3px; color: rgba(255,254,247,.82); font-size: .7rem; }
     .contact-note svg { flex: none; margin-top: 2px; }
 
     /* Footer */
@@ -420,6 +436,11 @@
       .facility-chip small { font-size: .64rem; }
       .strength-grid { grid-template-columns: 1fr; gap: 12px; margin-top: 30px; }
       .solutions-grid { grid-template-columns: 1fr; gap: 12px; margin-top: 30px; }
+      .people-strip { gap: 9px; }
+      .person-card img { height: 145px; }
+      .activity-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 170px; gap: 10px; margin-top: 30px; }
+      .activity-card, .activity-card:nth-child(1), .activity-card:nth-child(4) { grid-column: span 1; }
+      .activity-card:nth-child(1), .activity-card:nth-child(4) { grid-column: span 2; }
       .strength-card, .strength-card:last-child { grid-column: auto; min-height: auto; padding: 22px; }
       .strength-top { margin-bottom: 16px; }
       .strength-card p { font-size: .83rem; }
@@ -516,6 +537,28 @@
     .btn-status { color: #237A4B; background: #E8F7EF; border-color: #B8E3C5; }
     .contact-note, .hero-proof, .section-lead, .solution-card p, .strength-card p { color: #5D7567; }
     .footer-meta, .footer-meta a { color: #E8F7EF; }
+    /* UX polish: one type system, calmer rhythm, and clearer reading measure */
+    html { font-size: 16px; }
+    body, button, input, textarea, select { font-family: "Noto Sans TC", system-ui, sans-serif; }
+    .brand-sub, .card-number { font-family: inherit; }
+    h1, h2, h3, p { text-wrap: pretty; }
+    h1, h2, h3 { color: #26372D; }
+    .container { width: min(1160px, calc(100% - 40px)); }
+    .section { padding: clamp(76px, 9vw, 112px) 0; }
+    .section-title { line-height: 1.38; letter-spacing: -.025em; }
+    .section-lead, .hero-description { line-height: 1.95; }
+    .hero { padding-top: calc(var(--header-height) + 60px); }
+    .hero h1 { line-height: 1.28; letter-spacing: -.035em; }
+    .hero-description { max-width: 590px; }
+    .btn, .nav-cta { letter-spacing: .02em; }
+    :focus-visible { outline-color: #FFD451; box-shadow: 0 0 0 4px rgba(35,122,75,.22); }
+    .main-nav { gap: clamp(9px, 1.25vw, 18px); }
+    .nav-link { font-size: .78rem; }
+    .activity-section, .solutions-section, .contact-section { scroll-margin-top: calc(var(--header-height) + 24px); }
+    @media (min-width: 901px) {
+      .contact-panel { gap: 58px; }
+      .about-grid, .products-heading, .strengths-head { gap: clamp(48px, 6vw, 86px); }
+    }
 
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
@@ -543,6 +586,8 @@
         <a class="nav-link" href="#ai-solutions">AI 解決方案</a>
         <a class="nav-link" href="#cases">應用案例</a>
         <a class="nav-link" href="#insights">科技觀點</a>
+        <a class="nav-link" href="#activities">活動足跡</a>
+        <a class="nav-link" href="#solutions">服務方案</a>
         <a class="nav-link" href="#contact">聯絡我們</a>
       </nav>
       <a class="nav-cta" href="https://calendar.app.google/VCNiPia2MQFE4FHs8" target="_blank" rel="noopener noreferrer">預約諮詢 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
@@ -558,6 +603,8 @@
       <a class="nav-link" href="#ai-solutions">AI 解決方案</a>
       <a class="nav-link" href="#cases">應用案例</a>
       <a class="nav-link" href="#insights">食品科技觀點</a>
+      <a class="nav-link" href="#activities">活動足跡</a>
+      <a class="nav-link" href="#solutions">服務方案</a>
       <a class="nav-link" href="#contact">聯絡我們</a>
       <a class="mobile-booking" href="https://calendar.app.google/VCNiPia2MQFE4FHs8" target="_blank" rel="noopener noreferrer">預約合作諮詢 <span aria-hidden="true">↗</span></a>
     </nav>
@@ -611,12 +658,12 @@
           <div class="about-visual reveal">
             <div class="about-photo-main">
               <!-- 示意圖片：請替換為大溪廠、新豐廠或實際生產場景 -->
-              <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1100&q=85" alt="整潔明亮的食品備料工作檯示意照片" loading="lazy">
+              <img src="作品集/MONKEY-01.jpg" alt="本人於活動現場的照片" loading="lazy">
             </div>
             <div class="experience-tile"><strong>22<span style="font-size:1.2rem;letter-spacing:0">年</span></strong><span>建廠發展與經驗累積<br>持續精進製造專業</span></div>
             <div class="about-photo-small">
               <!-- 示意圖片：請替換為真實食品製程或品質作業照片 -->
-              <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=700&q=85" alt="食品製作流程示意照片" loading="lazy">
+              <img src="作品集/MONKEY-02.jpg" alt="公司同仁與團隊活動照片" loading="lazy">
             </div>
           </div>
           <div class="about-copy reveal reveal-delay-1">
@@ -768,6 +815,24 @@
     </section>
 
     <!-- 09 聯絡與預約 -->
+    <section class="section activity-section" id="activities" aria-labelledby="activities-title">
+      <div class="container">
+        <div class="reveal">
+          <span class="section-kicker">ACTIVITY MOMENTS</span>
+          <h2 class="section-title" id="activities-title">活動足跡與現場展演</h2>
+          <p class="section-lead">記錄參與活動、團隊互動與現場交流的精彩片段，將每一次投入化為持續前進的能量。</p>
+        </div>
+        <div class="activity-grid">
+          <figure class="activity-card reveal"><img src="作品集/34465DE1-B2B6-4024-B7BD-54D451417C5F.jpg" alt="活動現場與吉祥物合影" loading="lazy"><figcaption class="activity-caption"><strong>現場互動</strong><span>Activity moments</span></figcaption></figure>
+          <figure class="activity-card reveal reveal-delay-1"><img src="作品集/42B19150-81B8-4CD5-A87B-2AA0639EA263.jpg" alt="球場活動現場" loading="lazy"><figcaption class="activity-caption"><strong>場域交流</strong><span>On-site experience</span></figcaption></figure>
+          <figure class="activity-card reveal reveal-delay-2"><img src="作品集/5157221A-BC1F-4E31-B334-49BB0A4B51F9.jpg" alt="活動中的互動畫面" loading="lazy"><figcaption class="activity-caption"><strong>團隊互動</strong><span>Team connection</span></figcaption></figure>
+          <figure class="activity-card reveal"><img src="作品集/A06C87B8-D1B4-412D-9E20-FD0ACC251257.jpg" alt="與團隊及活動夥伴合影" loading="lazy"><figcaption class="activity-caption"><strong>共同參與</strong><span>Shared moments</span></figcaption></figure>
+          <figure class="activity-card reveal reveal-delay-1"><img src="作品集/CC0604E1-AAA2-4D00-92FB-4CF5342AE799.jpg" alt="活動場上的精彩時刻" loading="lazy"><figcaption class="activity-caption"><strong>精彩時刻</strong><span>Memorable scenes</span></figcaption></figure>
+          <figure class="activity-card reveal reveal-delay-2"><img src="作品集/D7A48D87-EE3A-4713-9F35-045EBDBF703B.jpg" alt="活動現場近照" loading="lazy"><figcaption class="activity-caption"><strong>熱情現場</strong><span>Live energy</span></figcaption></figure>
+        </div>
+      </div>
+    </section>
+
     <section class="section solutions-section" id="solutions" aria-labelledby="solutions-title">
       <div class="container">
         <div class="reveal">
